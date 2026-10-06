@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+         enableEdgeToEdge()
         // Capture the Activity BEFORE setContent. The button needs it to build an Intent.
         val activity = this
         setContent {
@@ -58,6 +58,12 @@ class MainActivity : ComponentActivity() {
                             activity.startActivity(intent)
                         }) {
                             Text("Open profile")
+                        }
+                        Button(onClick = {
+                            val intent = Intent(activity, ProfileXmlActivity::class.java)
+                            activity.startActivity(intent)
+                        }) {
+                            Text("XML form")
                         }
                     }
                 }

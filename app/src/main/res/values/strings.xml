@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Kampus Go</string>
+
+    <string-array name="majors">
+        <item>Informatics</item>
+        <item>Information Systems</item>
+        <item>Computer Engineering</item>
+    </string-array>
 </resources>
