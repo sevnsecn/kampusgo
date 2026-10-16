@@ -33,6 +33,13 @@ class ProfileXmlActivity : ComponentActivity() {
                 val ok = etName.text.toString().isNotBlank() &&
                         etEmail.text.toString().contains("@")
                 btnSave.isEnabled = ok
+
+                val email = etEmail.text.toString()
+                etEmail.error = if (email.isNotEmpty() && !email.contains("@")) {
+                    "Email needs @"
+                } else {
+                    null
+                }
             }
         }
         etName.addTextChangedListener(watcher)
